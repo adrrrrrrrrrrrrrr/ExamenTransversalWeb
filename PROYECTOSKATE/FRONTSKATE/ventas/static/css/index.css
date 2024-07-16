@@ -1,0 +1,478 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth; /*estilo mas elegante para deslizar a las secciones*/
+}
+
+
+body{
+font-family: Verdana, Geneva, sans-serif;
+    margin: 0;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2.0em; color:beige;}
+p{font-size: 1.25em; color: #f6f2f2;}
+
+button{
+    font-size: 1em;
+    padding: 10px 30px;
+    border-radius: 110px;
+    border: 0.3px solid rgba(0, 0, 0,0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0,0.5);
+    
+    background-color: rgba(34, 214, 157, 0.443);
+    color: rgb(255, 255, 255);
+}
+
+button a {
+    color: rgb(255, 255, 255); /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+
+button:hover{  /*propiedad para dar sombra al pasar el cursor sobre el boton*/
+    background-color: rgba(0, 255, 72, 0.467);
+
+}
+
+.container{                 /*  */
+    max-width: 1400px;     /*ancho maximo de container */
+    margin:auto;         /*margen*/
+}
+
+.color-historia{ color:yellow;}
+
+
+
+/*--------------------------------- HEADER ---------------------------------------*/
+
+header{
+    background-color: rgb(4, 0, 0);  /*color de fondo de header*/
+    /* height: 60px; Altura deseada del header */
+}
+
+header .container{    
+    display: flex;
+    flex-direction: column;   /*elementos de contenedor en columna*/
+    align-items: center;  /*centrarlos horizontalmente*/    
+}
+
+header a{
+    padding: 0px 12px;
+    text-decoration: none;   /*sin decoracion subrayado*/
+    /*font-weight: bold;   negrita*/
+    color: rgb(242, 252, 252);  
+}
+
+header .logo{ 
+    margin: 0;
+    padding: 10px  15px ;  /*bordes   (arriba, abajo), costados.*/    
+}
+
+header .search-container{ 
+    
+    padding: 4px  4px ;  /*bordes   (arriba, abajo), costados.*/    
+
+}
+
+
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;        /*alinear texto del nav*/
+    padding-bottom: 25px;
+    
+}
+
+
+
+header a:hover{    /*color al pasar cursor por encima*/
+    color: rgb(3, 243, 251)
+}
+
+/* Estilos para el campo de búsqueda */
+.search-container {
+    position: relative; /* Asegura que el campo de búsqueda esté posicionado de manera relativa */
+}
+
+.search-box {
+    width: 200px; /* Ancho del campo de búsqueda */
+    padding: 8px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 30px; /* Borde redondeado */
+    display: none; /* Ocultar el campo de búsqueda por defecto */
+    position: absolute; /* Posiciona el campo de búsqueda de manera absoluta */
+    left: -210px; /* Mueve el campo de búsqueda 210px hacia la izquierda para que esté al lado del botón */
+
+}
+
+.search-button {
+    background-color: #faf5f5d9; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Borde redondeado */
+    padding: 8px; /* Espaciado interno */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+/* Estilo cuando se pasa el cursor sobre el botón */
+.search-button:hover {
+    background-color: #00eeff;
+}
+
+/* Estilos para la imagen dentro del botón */
+.search-button img {
+    width: 16px; /* Ancho de la imagen de la lupa */
+    height: auto; /* Altura automática */
+}
+
+/* Estilos para el botón de búsqueda */
+.search-button {
+    border: none; /* Sin borde */   
+    padding: 0; /* Sin relleno */
+    cursor: pointer; /* Cursor de puntero */
+    width: 29px; /* Ancho del botón */
+    height: 29px; /* Altura del botón */
+    background-image: url("media/2074.png") ; /* Ruta de la imagen de la lupa */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el botón */
+    background-repeat: no-repeat; /* No repetir la imagen */
+}
+
+
+/* ---------------------- BANNER SLIDER -----------------------------*/
+
+
+  /* Estilos para el slider */
+
+  .slider-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;   /*centrar items de boton*/
+    justify-content: center;   /*centrar en medio de la imagen*/
+    text-align: center;
+    flex-direction: column;
+    height: 70vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    background-position: center center;   
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+  }
+  
+  /* Estilos para los botones de control */
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .slide img {
+    width: 100%; /* Ancho del 100% de su contenedor */
+   
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+
+
+/*---------------------------- PRODUCTOS ----------------------------*/
+
+
+#nuestros-productos{
+
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-productos .container{
+
+    padding: 70px 0px;
+}
+
+#nuestros-productos h2{
+    margin-top: 0;
+    font-size: 40px;  
+}
+
+#nuestros-productos p{
+    display: none;
+}
+
+#nuestros-productos .carta{
+    background-size: cover; /* Achica la imagen de fondo al 50% de su tamaño original en el eje x */
+    background-position: center center; /* Centra la imagen de fondo */
+    padding: 50px;
+    margin: 25px;
+    border-radius: 20px;
+}
+
+
+
+.carta:first-child{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.2) )
+    ,url("media/tablas.jpeg") ;   
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.2) )
+    ,url("media/zapatillas.jpeg") ;
+}
+
+
+.carta:nth-child(3){
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2) )
+        ,url("media/trapos.jpeg") ; 
+}
+
+.carta:nth-child(4){
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2) )
+        ,url("media/ruedas.jpeg") ;
+    
+    
+}
+
+#despacho { 
+    background-color: black;
+
+    
+}
+
+#despacho video {
+    width: 100%; /* Ajusta el ancho del video según el contenedor */
+    height: 60%; /* Ajusta automáticamente la altura según el ancho */
+    object-fit: cover    ; /* Ajusta el video para cubrir todo el contenedor */
+    border-radius: 50px;
+}
+
+
+/* --------------------------- NOTICIAS GAMEXTINE SK8 -------------------------------*/
+
+
+#noticias{
+    background-color: rgb(0, 0, 0);
+    padding: 20px 0px;   
+}
+
+#noticias .container h3{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+#noticias .container p{
+        display: flex;
+        justify-content: center;
+    color: rgba(242, 246, 239, 0.536);  
+    }
+
+#noticias-fondo{
+    display: flex;
+    align-items: center;   /*centrar items de boton*/
+    justify-content: flex-end;   /*centrar en medio de la imagen*/
+    padding: 30px;
+    text-align: right;
+    flex-direction: column;
+    height: 80vh;
+    background-image: linear-gradient(
+    0deg,
+    rgba(6, 6, 6, 0.183),
+    rgba(41, 34, 34, 0.471) )
+    ,url("media/skate1.avif") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;  
+    border-radius: 90px;   
+}
+
+#noticias-fondo h3{
+    color: rgba(96, 101, 92, 0.305);    
+    text-align: center;
+}
+
+#noticias-fondo .container{
+    padding: 150px 0px;
+}
+
+
+/* ---------------------- SECCION RRSS, DIRECCION, MAS + -----------------*/
+
+
+#seccion-final{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+}
+
+#seccion-final .container{
+    padding: 25px 0px;   /*ancho del container*/
+}
+
+#seccion-final h2{
+    margin-top: 0;
+    font-size: 12px;  
+}
+
+#seccion-final p{
+    display: none;
+}
+
+#seccion-final .carta2{
+    background-size: cover; /* Achica la imagen de fondo al 50% de su tamaño original en el eje x */
+    background-position: center center; /* Centra la imagen de fondo */
+    padding: 50px;
+    margin: 25px;
+    border-radius: 20px;
+}
+
+.carta2:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.098),
+        rgba(0, 0, 0, 0.914) )
+        ,url("media/maps.jpeg") ;
+        border-radius: 110px;
+}
+
+.carta2:nth-child(2){
+    
+        border-radius: 110px;
+}
+
+.carta2:nth-child(3){
+    
+        border-radius: 110px;
+    }
+
+/*achicar seccion final*/
+
+#seccion-final .productos{
+    display: flex;
+    justify-content: center;
+}
+
+#seccion-final p{
+    display: block;
+    margin-bottom: 20px; 
+}
+
+#seccion-final h3{
+    margin-top: 0;
+}
+
+#seccion-final .carta2{
+    padding:10px;
+}
+
+#seccion-final nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;        /*alinear texto del nav*/
+    padding-bottom: 25px;
+}
+
+#seccion-final a{
+    padding: 10px 12px;
+    text-decoration: none;   /*sin decoracion subrayado*/
+    /*font-weight: bold;   negrita*/
+    color: rgb(242, 252, 252);  
+}
+
+#seccion-final  a:hover{    /*color al pasar cursor por encima*/
+    color: rgb(3, 247, 251)
+}
+
+
+
+/*-------------------------       FOOTER    --------------------------------*/
+
+
+footer{
+    background-color: rgb(1, 1, 1);   
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgba(243, 249, 243, 0.497);
+    text-align: center;
+    font-size: 0.8em;
+}
+
+footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separate-images {
+    display: flex;
+    justify-content: space-between; /* Ajusta el espacio entre las imágenes */
+    margin-top: 20px; /* Puedes ajustar el margen superior según tus necesidades */ 
+}
+
+
+
+
+
+ /* ---------CODIGOS PARA RESPONSE MOVIL/WEB -----------------*/
+
+    @media (min-width:720px){
+
+        header .container{
+            flex-direction: row;    
+            justify-content: space-between;
+        }
+    
+    
+        header nav{
+            flex-direction: row;
+            padding-bottom: 0;           
+        }  
+
+       
+    }
+  
+
+
+
+
+

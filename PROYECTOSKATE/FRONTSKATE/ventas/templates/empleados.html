@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>ADMINISTRACION EMPLEADOS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/zapatillas1.css' %}">
+    <script src="/static/js/variables.js"></script>
+    <script src="{% static 'js/scripts1.js' %}"></script> <!-- Importar el script aquí -->
+    <script src="{% static 'js/empleadosCrud.js' %}"></script> 
+    <script src="/static/js/Ventana.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+</head>
+<body>
+    
+    <header>  
+           
+    </header>   
+
+   
+    
+    
+
+    <main>   
+   
+            <div class="container">
+                
+                <h3>Empleados</h3>
+
+                
+                    
+                    <div style="text-align: center;">
+                        
+                        <table border="0" style="margin: auto; border-collapse: collapse; width: 50%; background-color: #000000; border-radius: 10px; color: rgb(163, 163, 163);">
+                            
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">ID empleado</td>
+                                <td><input id="txIdEmpleado"
+                                            name="txIdEmpleado"
+                                            maxlength="10"
+                                            type="text"
+                                            value="1"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">RUT</td>
+                                <td><input id="txRut"
+                                            name="txRut"
+                                            maxlength="10"
+                                            type="text"
+                                            value="18077547-1"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Nombre</td>
+                                <td><input id="txNombre"
+                                            name="txNombre"
+                                            maxlength="10"
+                                            type="text"
+                                            value="Juan"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Apellido Paterno</td>
+                                <td><input id="txApaterno"
+                                            name="txApaterno"
+                                            maxlength="30"
+                                            size="30"
+                                            type="text"
+                                            value="Rodriguez"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Apellido Materno</td>
+                                <td><input id="txAmaterno"
+                                            name="txAmaterno"
+                                            maxlength="30"
+                                            size="30"
+                                            type="text"
+                                            value="Quezada"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>  
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Correo electronico</td>
+                                <td><input id="txCorreo"
+                                        name="txCorreo"
+                                        maxlength="30"
+                                        size="30"
+                                        type="text"
+                                        value="jgrodriguez@gmail.com"
+                                        style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                        ></td>
+                            </tr>  
+                        
+                        
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Telefono</td>
+                                <td><input id="txTelefono"
+                                            name="txTelefono"
+                                            maxlength="30"
+                                            size="30"
+                                            type="text"
+                                            value="963064036"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr> 
+
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Sexo</td>
+                                <td><input id="txSexo"
+                                            name="txSexo"
+                                            maxlength="30"
+                                            size="30"
+                                            type="text"
+                                            value="M"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr> 
+                          
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Fecha de nacimiento</td>
+                                <td><input id="txFnacimiento"
+                                            name="txFnacimiento"
+                                            maxlength="30"
+                                            size="30"
+                                            type="text"
+                                            value="16/08/1992"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr> 
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Edad</td>
+                                <td><input id="txEdad"
+                                            name="txEdad"
+                                            maxlength="30"
+                                            size="30"
+                                            type="text"
+                                            value="31"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr> 
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Direccion</td>
+                                <td><input id="txDireccion"
+                                            name="txDireccion"
+                                            maxlength="30"
+                                            size="30"
+                                            type="text"
+                                            value="las kalilas 15505"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr> 
+                        
+                            <tr>
+                                <td colspan="2" style="text-align: center;">
+                                    <button id="btLeer" onclick="javascript:EmpleadoLeer()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Leer</button>        
+                                    <button id="btModificar" onclick="javascript:EmpleadoActualizar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Modificar</button>        
+                                    <button id="btAgregar" onclick="javascript:EmpleadoAgregar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Agregar</button>        
+                                    <button id="btEliminar" onclick="javascript:EmpleadoEliminar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Eliminar</button>        
+                                    <button id="btLimpiar" onclick="javascript:limpiar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Limpiar</button>        
+                                    <style>
+                                        #btLeer:hover, #btModificar:hover, #btAgregar:hover, #btEliminar:hover, #btLimpiar:hover {
+                                            background-color: #007acc; /* Cambia el color de fondo al pasar el ratón */
+                                            color: #fff; /* Cambia el color del texto al pasar el ratón */
+                                        }
+                                    </style>
+                                </td>
+                                
+                            
+                            </tr>                     
+                        </table>
+                    </div>
+      
+
+                    
+
+            </div>
+        </section>  
+    </main> 
+
+
+        
+    <footer>
+                
+    </footer>
+
+
+    <script src="{% static 'js/scriptsHF1.js' %}"></script> 
+    <script src="{% static 'js/crud.js' %}"></script> 
+    
+</body>
+</html>
+

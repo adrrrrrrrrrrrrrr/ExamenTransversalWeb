@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CATALOGO</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/tablas1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/carritox.css' %}">
+
+    <link href="/static/tabler/dist/css/tabler.minn.css?1692870487" rel="stylesheet" />
+    <script src="/static/js/jquery.min.js"></script>
+
+</head>
+
+<body 
+
+    onload="cargaInicio()">
+
+            <header>  
+           
+            </header> 
+
+            <section id="banner">
+                <div class="container">        
+                   <section id="banner-fondo"></section>
+               </div>
+            </section>
+            
+            <main>  
+                 
+                    
+                    <div class="container">
+                        
+                        <h3>NUESTROS PRODUCTOS</h3>
+        
+                        <section class="contenedor">
+                            
+                            <!-- Contenedor de elementos -->
+
+                                {% block contenido%}
+                                
+                                {% endblock contenido%}
+
+                            
+                        </section>
+                        
+                        <section class="contenedor">
+                            <div id="objDiv"></div>
+                            <div id="carritoDiv"></div>
+                        </section>
+                        
+                    </div>
+                         
+            </main>
+         
+            <footer>
+                        
+            </footer>
+           
+            <script src="{% static 'js/scriptsHF1.js' %}"></script> <!-- Importar el script aquí -->
+            <script src="/static/js/galeriass.js"></script>
+
+</body>
+</html>

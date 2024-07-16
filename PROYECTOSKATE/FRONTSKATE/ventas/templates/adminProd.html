@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>ADMINISTRACION CLIENTES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/zapatillas1.css' %}">
+    <script src="{% static 'js/scripts1.js' %}"></script> <!-- Importar el script aquí -->
+    <script src="{% static 'js/productosCrud.js' %}"></script> 
+    <script src="/static/js/Ventana.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    
+</head>
+<body>
+    
+    <header>  
+           
+    </header>   
+
+    <main>   
+   
+            <div class="container">
+                
+                <h3>Productos</h3>
+
+                    <div style="text-align: center;">
+                        
+                        <table border="0" style="margin: auto; border-collapse: collapse; width: 50%; background-color: #000000; border-radius: 10px; color: rgb(163, 163, 163);">
+
+                            <tr>
+                                <td style="padding: 25px; font-weight: bold;">SKU</td>
+                                <td><input id="txSku"
+                                            name="txSku"
+                                            maxlength="10"
+                                            type="text"
+                                            value="5656"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 25px; font-weight: bold;">Descripcion</td>
+                                <td><input id="txDescripcion"
+                                            name="txDescripcion"
+                                            maxlength="10"
+                                            type="text"
+                                            value="ELEMENT BLUE"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 25px; font-weight: bold;">Color</td>
+                                <td><input id="txColor"
+                                            name="txColor"
+                                            maxlength="30"
+                                            size="30"
+                                            type="text"
+                                            value="AZUL MARINO"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 25px; font-weight: bold;">Marca</td>
+                                <td><input id="txMarca"
+                                            name="txMarca"
+                                            maxlength="30"
+                                            size="30"
+                                            type="text"
+                                            value="ELEMENT"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>  
+                            <tr>
+                                <td style="padding: 25px; font-weight: bold;">Stock</td>
+                                <td><input id="txStock"
+                                        name="txStock"
+                                        maxlength="30"
+                                        size="30"
+                                        type="text"
+                                        value="100"
+                                        style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                        ></td>
+                            </tr>  
+                        
+                        
+                           
+                        
+                            <tr>
+                                <td colspan="2" style="text-align: center;">
+                                    <button id="btLeer" onclick="javascript:ProductoLeer()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Leer</button>        
+                                    <button id="btModificar" onclick="javascript:ProductoActualizar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Modificar</button>        
+                                    <button id="btAgregar" onclick="javascript:ProductoAgregar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Agregar</button>        
+                                    <button id="btEliminar" onclick="javascript:ProductoEliminar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Eliminar</button>        
+                                    <button id="btLimpiar" onclick="javascript:limpiar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Limpiar</button>        
+                                    <style>
+                                        #btLeer:hover, #btModificar:hover, #btAgregar:hover, #btEliminar:hover, #btLimpiar:hover {
+                                            background-color: #e9d4d4; /* Cambia el color de fondo al pasar el ratón */
+                                            color: #d6d3d3; /* Cambia el color del texto al pasar el ratón */
+                                        }
+                                    </style>
+                                </td>
+                                
+                            
+                            </tr>                     
+                        </table>
+                    </div>
+      
+
+
+
+            </div>
+        </section>  
+    </main> 
+
+    <footer>
+                
+    </footer>
+
+    <script src="{% static 'js/scriptsHF1.js' %}"></script> 
+    <script src="{% static 'js/crud.js' %}"></script> 
+    
+</body>
+</html>
+

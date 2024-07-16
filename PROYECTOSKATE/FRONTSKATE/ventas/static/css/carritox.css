@@ -1,0 +1,61 @@
+#carritoDiv h2 {
+    color: #ffffff; /* Color del título más claro */
+    font-size: 1.6rem; /* Tamaño del título mejorado */
+    margin-bottom: 20px; /* Espaciado inferior ajustado */
+    text-align: center; /* Centrar el título */
+}
+
+.carrito-item {
+    display: flex; /* Disposición flex para los elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrando verticalmente */
+    padding: 12px; /* Espaciado interno para cada item */
+    border-bottom: 1px solid #dee2e6; /* Línea divisoria */
+    transition: background-color 0.3s; /* Transición suave al hover */
+}
+
+.carrito-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Resaltar al pasar el mouse */
+}
+
+.carrito-item:last-child {
+    border-bottom: none; /* Sin línea divisoria en el último elemento */
+}
+
+.total {
+    font-weight: bold; /* Destacar el total */
+    font-size: 1.2rem; /* Tamaño del texto del total */
+    margin-top: 15px; /* Espaciado superior ajustado */
+}
+
+.btn-pagar {
+    background-color: #28a745; /* Color del botón de pagar más vibrante */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 12px 18px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    margin-top: 20px; /* Espaciado superior */
+    font-size: 1rem; /* Tamaño de fuente mejorado */
+    transition: background-color 0.3s ease; /* Transición suave al hover */
+}
+
+.btn-pagar:hover {
+    background-color: #218838; /* Color más oscuro al pasar el mouse */
+}
+
+#carritoDiv {
+    display: none; /* Ocultarlo por defecto */
+    background-color: rgba(0, 0, 0, 0.8); /* Color de fondo más opaco */
+    border: 1px solid #dee2e6; /* Borde suave */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 20px; /* Espaciado interno ajustado */
+    margin-top: 20px; /* Espaciado superior */
+    max-width: 400px; /* Ancho máximo del carrito */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Mostrar carrito solo si hay productos */
+#carritoDiv.active {
+    display: block; /* Mostrar cuando tiene productos */
+}

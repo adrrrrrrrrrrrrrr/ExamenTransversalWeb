@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    {% load static %}
+    <title>Validacion Administradores</title>
+    <link rel="stylesheet" href="{% static 'css/logginnAdmin.css' %}">
+   
+    
+
+
+</head>
+<body>
+   
+    <header>    
+
+    </header>   
+
+        <section id="loggin-registro">
+            <section id="loggin">
+                <div class="container">
+                    <p> Solo administradores </p>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p  }}
+                        <button type="submit">Ingresar</button>
+                    </form>
+                    
+                </div>
+            </section>  
+        </section>  
+    
+       
+
+
+
+
+    <footer>
+                
+    </footer>
+
+    <script src="{% static 'js/scriptsHF1.js' %}"></script> <!-- Importar el script aquí -->
+
+
+</body>
+</html>

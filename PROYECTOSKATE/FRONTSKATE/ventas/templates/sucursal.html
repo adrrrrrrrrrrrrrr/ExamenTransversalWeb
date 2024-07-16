@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>ADMINISTRACION SUCURSAL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/zapatillas1.css' %}">
+    <script src="/static/js/variables.js"></script>
+    <script src="{% static 'js/scripts1.js' %}"></script> <!-- Importar el script aquí -->
+    <script src="{% static 'js/sucursalCrud.js' %}"></script> 
+    <script src="/static/js/Ventana.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+</head>
+<body>
+    
+    <header>  
+           
+    </header>   
+
+   
+    
+    
+
+    <main>   
+   
+            <div class="container">
+                
+                <h3>Sucursal</h3>
+
+                
+                    
+                    <div style="text-align: center;">
+                        
+                        <table border="0" style="margin: auto; border-collapse: collapse; width: 50%; background-color: #000000; border-radius: 10px; color: rgb(163, 163, 163);">
+                            
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">ID sucursal</td>
+                                <td><input id="txIdSucursal"
+                                            name="txIdSucursal"
+                                            maxlength="10"
+                                            type="text"
+                                            value="1"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Nombre sucursal</td>
+                                <td><input id="txNombreSucursal"
+                                            name="txNombreSucursal"
+                                            maxlength="100"
+                                            type="text"
+                                            value="Sucursal Oriente"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; font-weight: bold;">Direccion sucursal</td>
+                                <td><input id="txDireccion"
+                                            name="txDireccion"
+                                            maxlength="100"
+                                            type="text"
+                                            value="Sn cristobal 155 , pichidegua"
+                                            style="width: 100%; padding: 8px; border: 1px solid #3d3d3d; border-radius: 5px; box-sizing: border-box;background-color: #03030300;color: #e6e4e4; text-align: center;"
+                                            ></td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="2" style="text-align: center;">
+                                    <button id="btLeer" onclick="javascript:SucursalLeer()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Leer</button>        
+                                    <button id="btModificar" onclick="javascript:SucursalActualizar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Modificar</button>        
+                                    <button id="btAgregar" onclick="javascript:SucursalAgregar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Agregar</button>        
+                                    <button id="btEliminar" onclick="javascript:SucursalEliminar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Eliminar</button>        
+                                    <button id="btLimpiar" onclick="javascript:limpiar()" style="padding: 10px 20px; margin: 15px; background-color: #969696c4; color: #e6e4e4; border: none; cursor: pointer; border-radius: 5px;">Limpiar</button>        
+                                    <style>
+                                        #btLeer:hover, #btModificar:hover, #btAgregar:hover, #btEliminar:hover, #btLimpiar:hover {
+                                            background-color: #007acc; /* Cambia el color de fondo al pasar el ratón */
+                                            color: #fff; /* Cambia el color del texto al pasar el ratón */
+                                        }
+                                    </style>
+                                </td>
+                                
+                            
+                            </tr>                     
+                        </table>
+                    </div>
+      
+
+                    
+
+            </div>
+        </section>  
+    </main> 
+
+
+        
+    <footer>
+                
+    </footer>
+
+
+    <script src="{% static 'js/scriptsHF1.js' %}"></script> 
+    <script src="{% static 'js/crud.js' %}"></script> 
+    
+</body>
+</html>
+

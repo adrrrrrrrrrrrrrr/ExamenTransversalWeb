@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>ADMINISTRADOR</title>
+    <link rel="stylesheet" href="{% static 'css/indexx.css' %}">
+    <link rel="stylesheet" href="{% static 'css/zapatillas1.css' %}">
+    <script src="{% static 'js/scripts1.js' %}"></script> <!-- Importar el script aquí -->
+    
+    
+</head>
+<body>
+
+    <header>  
+        
+
+        
+    </header>   
+
+
+   
+        
+ 
+
+    <main>   
+        
+            <div class="container">
+                
+
+                <section class="contenedor">
+                    <!-- Contenedor de elementos -->
+                    <div class="contenedor-items">
+                        
+                        <div class="item">
+                            <span class="titulo-item">Empleados</span>
+                            <img src="{% static 'img/empleados.jpeg' %}"  alt=""  class="img-item" style="width: 350px; height: 500px;">
+                            <button>
+                                <a href="http://127.0.0.1:8000/empleados"> Administrar empleados </a>
+                            </button>
+                           
+                        </div>
+                        
+                        <div class="item">
+                            <span class="titulo-item">Clientes</span>
+                            <img src="{% static 'img/cliente1.png' %}" alt="" class="img-item" style="width: 350px; height: 500px;"> 
+                            
+                            <button>
+                                <a href="http://127.0.0.1:8000/clientes"> Administrar clientes </a>
+                            </button>
+                        </div>
+                        
+                        <div class="item">
+                            <span class="titulo-item">Productos</span>
+                            <img src="{% static 'img/skate2.avif' %}" alt="" class="img-item" style="width: 330px; height: 500px;">                        
+                            <button>
+                                <a href="http://127.0.0.1:8000/adminProd"> Administrar productos </a>
+                            </button>
+                        </div>
+                        
+                        <div class="item">
+                            <span class="titulo-item">Sucursales</span>
+                            <img src="{% static 'img/tiendas.jpeg' %}" alt="" class="img-item" style="width: 330px; height: 500px;">                        
+                            <button>
+                                <a href="http://127.0.0.1:8000/sucursal"> Administrar sucursal </a>
+                            </button>
+                        </div>
+
+                        <div class="item">
+                            <span class="titulo-item">Proveedores</span>
+                            <img src="{% static 'img/proveedores2.jpg' %}" alt="" class="img-item" style="width: 330px; height: 500px;">                        
+                            <button>
+                                <a href="http://127.0.0.1:8000/proveedores"> Administrar proveedores </a>
+                            </button>
+                        </div>
+                </section>
+            </div>
+        
+    </main> 
+
+    
+    
+    
+    
+    <footer>
+
+    </footer>
+
+    <script src="{% static 'js/scriptsHF1.js' %}"></script> <!-- Importar el script aquí -->
+    
+
+</body>
+</html>
+
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load static%}
+    <title>HOMESK8</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="{% static 'js/scripts1.js' %}"></script> <!-- Importar el script aquí -->
+    
+    
+</head>
+<body>
+
+   
+
+    <header>  
+        
+
+        
+    </header>   
+
+
+   
+        <div class="slider-container">
+            <div class="slider">
+                    <div class="slide">
+                        <img src= "{% static 'img/otoñ.png'  %}"  alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="{% static 'img/sol.png'  %}" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="{% static 'img/ban3.jpeg'  %}" alt="Slide 3">
+                    </div> 
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            <script src="slides.js"></script>
+        </div>
+ 
+    <section id="nuestros-productos">
+        <div class="container">
+            <h3>Nuestros Productos</h3>
+            <button>
+                <a href="http://127.0.0.1:8000/catalogo"> Catalogo </a>
+            </button>
+            <button>
+                <a href="http://127.0.0.1:8000/catalogo_login"> Catalogo de usuarios registrados </a>
+            </button>
+            <div class="productos">
+                <div class="carta">
+                    <h3>  Tablas  </h3>                 
+                </div>
+                <div class="carta">
+                    <h3> Zapatillas   </h3>                                              
+                </div>
+                <div class="carta">
+                    <h3>  Trapos  </h3>                  
+                </div>
+                <div class="carta">
+                    <h3>  Accesorios  </h3>                
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <div id="despacho">
+        <div class="container">
+            <video autoplay loop muted>
+                <source src= "{% static 'img/videodespacho.mp4'  %}"  type="video/mp4">
+
+            </video>
+        </div>
+    </div>
+
+  
+    <section id="noticias">
+             <div class="container">
+                <h3>GameXTime</h3>
+                <p>Noticias, campeonatos y eventos SK8 </p>
+                <section id="noticias-fondo">
+                    <button>
+                        <a href="https://www.xgames.com/events/x-games-japan-2023/competitions/mens-skateboard-street-final"> Ver +</a>
+                    </button>
+
+                </section>
+            </div>
+    </section>
+    
+    
+    
+    <footer>
+
+    </footer>
+
+    <script src="{% static 'js/scriptsHF1.js' %}"></script> <!-- Importar el script aquí -->
+
+
+</body>
+</html>
+
+
+
+
